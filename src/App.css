@@ -1,0 +1,178 @@
+/* ===== CONTAINER CHÍNH ===== */
+.todo-app {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* ===== TIÊU ĐỀ ===== */
+.todo-app__title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 32px;
+}
+
+/* ===== INPUT & BUTTON THÊM ===== */
+.todo-app__input {
+  width: calc(100% - 130px);
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+.todo-app__input:focus {
+  border-color: #4CAF50;
+}
+
+.todo-app__button {
+  width: 110px;
+  padding: 12px;
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+.todo-app__button:hover {
+  background-color: #45a049;
+}
+
+.todo-app__button:active {
+  transform: scale(0.98);
+}
+
+/* ===== THÔNG BÁO RỖNG ===== */
+.todo-app__empty {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+/* ===== DANH SÁCH TODO ===== */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+}
+
+/* ===== TỪNG ITEM TODO ===== */
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.todo-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== TEXT TODO ===== */
+.todo-item__text {
+  flex: 1;
+  font-size: 18px;
+  color: #333;
+  margin-left: 10px;
+  word-break: break-word;
+  text-align: left;
+}
+
+/* ===== BUTTONS TRONG ITEM ===== */
+.todo-item__button {
+  padding: 8px 12px;
+  margin-left: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* Nút Move Up (⬆️) */
+.todo-item__button:nth-of-type(1) {
+  background-color: #2196F3;
+  color: white;
+}
+
+.todo-item__button:nth-of-type(1):hover {
+  background-color: #0b7dda;
+}
+
+/* Nút Move Down (⬇️) */
+.todo-item__button:nth-of-type(2) {
+  background-color: #FF9800;
+  color: white;
+}
+
+.todo-item__button:nth-of-type(2):hover {
+  background-color: #e68900;
+}
+
+/* Nút Xóa */
+.todo-item__button:nth-of-type(3) {
+  background-color: #f44336;
+  color: white;
+}
+
+.todo-item__button:nth-of-type(3):hover {
+  background-color: #da190b;
+}
+
+.todo-item__button:active {
+  transform: scale(0.95);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .todo-app {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .todo-app__input {
+    width: 65%;
+    display: inline-block;
+  }
+
+  .todo-app__button {
+    width: 28%;
+    padding: 10px;
+    font-size: 14px;
+    display: inline-block;
+  }
+
+  .todo-item__button {
+    padding: 6px 8px;
+    font-size: 14px;
+  }
+}
+
